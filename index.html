@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Website</title>
+  <style>
+    
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFB6C1;
+    }
+
+    header {
+      background-color: #ffa4c4;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ffa4c4;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #FFFFFF;
+    }
+
+    section {
+      display: none;
+      padding: 40px;
+    }
+
+    #about {
+      display: block;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      color: #d0618b;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fdb2d6;
+    }
+
+    .section-box {
+      border: 2px solid #fdb2d6;
+      background-color: #ffe4ec;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+      color: #d63384;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      background-color: #f8c8dc;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      border: none;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      text-align: left;
+      font-size: 18px;
+      animation: fadeInUp 1s ease-out;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .about-img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+
+    .about-img:hover {
+      transform: scale(1.05);
+    }
+
+    .skills-container {
+      background-color: #f4f4f4;
+      width: 80%;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background-color: #ff95c6;
+    }
+
+    .project-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      width: 30%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('about')">About Me</a>
+  <a onclick="showSection('projects')">My Projects</a>
+  <a onclick="showSection('skills')">Skills</a>
+  <a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>About Me</h2>
+<p>I'm Mesha Kelly Calda, a student and passionate artist who loves to draw and paint. Since I was young, I've enjoyed using art to express my thoughts and creativity. I've joined several art competitions, especially in school, which helped me grow my skills and confidence.</p>
+            <p>Creating art in different styles and experimenting with new techniques is something I really enjoy. Whether it's sketching, watercolor, or digital art, I love bringing my ideas to life.</p>
+
+      <div class="section-box">
+        <h3>Hobbies</h3>
+        <div class="tags">
+          <span class="tag">🎨 Drawing</span>
+          <span class="tag">🖌️ Painting</span>
+          <span class="tag">📚 Reading</span>
+          <span class="tag">🖥️ Watching Movies</span>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>Fun Facts</h3>
+        <div class="tags">
+          <span class="tag">I'm a night owl 🌙</span>
+          <span class="tag">My favorite color is pink 🎀</span>
+          <span class="tag">I love rainy days ☔</span>
+          <span class="tag">My favorite game is Roblox 🎮</span>
+        </div>
+      </div>
+    </div>
+
+    <img class="about-img" src="https://mail.google.com/mail/u/0?ui=2&ik=1990a8838b&attid=0.1&permmsgid=msg-f:1832094460839273844&th=196ce8348d492574&view=fimg&fur=ip&permmsgid=msg-f:1832094460839273844&sz=s0-l75-ft&attbid=ANGjdJ-yHPm7bnG3yehK_hR0w1PUywM9a9nGbmarKwHRA-_XhxDP-keGVkjpjJk7zeqkDAojIKFdbruG4I4fjmsIa9bZv30YNvBZunCZfOT7-2qSkpZuSVF9UyF3GRk&disp=emb&realattid=ii_196ce830b8862e1e7f51&zw" alt="About Me Image">
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My Projects / Works</h2>
+  <div class="project-gallery">
+    <div class="project-card">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=1990a8838b&attid=0.1&permmsgid=msg-f:1832093661781538495&th=196ce77a81bbb6bf&view=att&disp=inline&realattid=196ce775f2147fdc41b3&zw" alt="Visual Art">
+      <h3>Visual Art</h3>
+      <p>This project is about creating a digital art based on the story “The Thing Around Your Neck. I used my Ipad to draw create this to futher show my creatvity.”</p>
+    </div>
+
+    <div class="project-card">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=1990a8838b&attid=0.3&permmsgid=msg-f:1832093661781538495&th=196ce77a81bbb6bf&view=att&disp=safe&realattid=196ce775e4ee58061f21&zw" alt="Cell Drawing">
+      <h3>Cell Drawing</h3>
+      <p>This project focuses on drawing the animal and plant cell. It shows creativity and a passion for biology.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=1990a8838b&attid=0.2&permmsgid=msg-f:1832093661781538495&th=196ce77a81bbb6bf&view=att&disp=safe&realattid=196ce775edfcb8e2eea2&zw" alt="Poster Making">
+      <h3>Poster Making</h3>
+      <p>This is a poster that I created to join the APPLE poster making competition.
+Because of this drawing i managed to win the competition and improve my confidence.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <span class="skill-label">Painting Skills 🎨🖌️</span>
+      <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <span class="skill-label">Drawing Skills ✍🏼</span>
+      <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+    </div>
+    <div class="skill">
+      <span class="skill-label">Creativity Skills 👩🏻‍🎨</span>
+      <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill">
+      <span class="skill-label">Communication Skills 🔊</span>
+      <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <span class="skill-label">Critical Thinking Skills 🧠💡</span>
+      <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+
+  <div class="contact-section" style="
+    color: #d63384;
+    text-align: center;
+    border: 3px solid #fdb2d6;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    width: 80%;
+    background-color: #ffe4ec;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  ">
+  <div class="contact-section" style="color: #d63384; text-align: center;">
+    <h2>Contact Me</h2>
+    <p><strong>👩🏻 Name:</strong> Mesha Kelly Calda</p>
+    <p><strong>✉️ Email:</strong> <a href="mailto:caldameshakelly@gmail.com" style="color: #d63384; text-decoration: none;">caldameshakelly@gmail.com</a></p>
+
+    <h3>Send me a message</h3>
+    <p>If you have any further questions!</p>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <div class="social-icons" style="margin-top: 20px;">
+      <a href="https://www.facebook.com/meshakelly.calda.9?" target="_blank" style="margin: 0 10px; font-size: 24px; color: #d63384;">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/msha_klly" target="_blank" style="margin: 0 10px; font-size: 24px; color: #d63384;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@kellyylly" target="_blank" style="margin: 0 10px; font-size: 24px; color: #d63384;">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+      section.style.display = "none";
+    });
+    document.getElementById(id).style.display = "block";
+  }
+</script>
+
+</body>
+</html>
+
